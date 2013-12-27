@@ -2,7 +2,7 @@
     'use strict';
 
     /**
-     * Loads resources asynchronously and on-demand.
+     * Loads resources asynchronously on-demand.
      * @param {NodeList} [nodes] - A NodeList of elements. Default: the result of `querySelectorAll('[data-lazy]').
      * @returns {NodeList}
      */

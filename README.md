@@ -2,9 +2,85 @@
 
 A tiny JavaScript library for lazy loading resources.
 
+## What files can I load?
+
+- Images
+- Scripts
+- Styles
+- Iframes
+- Videos
+- Audios
+- Bacground images.
+
+### Examples
+
+#### Images
+```html
+<img data-lazy="http://foo.bar.com/foobar.png" width="400" height="300">
+```
+
+#### Script
+```html
+<script data-lazy="http://foobar.com/foo.js"></script>
+```
+
+#### Style
+```html
+<link data-lazy="http://foobar.com/foo.js" rel="stylesheet">
+```
+
+#### Iframe
+```html
+<iframe data-lazy="http://foobar.com" src="javascript:false"></iframe>
+```
+
+#### Video
+```html
+<video data-lazy="http://foobar.com/bar.mp4" controls></video>
+```
+
+#### Audio
+```html
+<audio data-lazy="http://foobar.com/foo.mp3" controls></audio>
+```
+
+### Background Images
+```css
+[data-lazy] {
+    background-image: none !important;
+}
+
+.box {
+    width: 400px;
+    height: 300px;
+    background: url('http://foo.bar.com/foobar.png') no-repeat center center;
+}
+```
+
+```html
+<div data-lazy class="box"></div>
+```
+
+### Progressive Enhancement is still important
+For example, to show images when JavaScript is not enabled you should include the images inside `<noscript>`.
+```html
+<img data-async="foo.jpg" width="400" height="300">
+<noscript>
+    <img src="foo.jpg" width="400" height="300">
+</noscript>
+```
+
 ## API
 
-[TODO]
+### lazy([nodes])
+Loads resources asynchronously on-demand.
+- `nodes` (optional): [NodeList] - A NodeList of elements. Default: the result of `querySelectorAll('[data-lazy]').
+
+```js
+var imgs = document.querySelectorAll('.on-demand');
+
+lazy(imgs);
+```
 
 ## Development setup
 1. Install [Git](http://git-scm.com/) and [NodeJS](http://nodejs.org/).
@@ -29,7 +105,8 @@ A tiny JavaScript library for lazy loading resources.
 
 ## Grunt tasks
 
-- `grunt tests`: Runs jasmine tests.
+- `grunt dev`: Builds a development version.
+- `grunt test`: Runs Jasmine tests.
 - `grunt dist`: Creates a distrubution version of `lazy.js`. You should found two files: `.dist/lazy.js` and `.dist/lazy.min.js`.
 
 ## Contribute
