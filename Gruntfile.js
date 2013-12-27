@@ -38,7 +38,7 @@ module.exports = function (grunt) {
 
         'uglify': {
             'options': {
-                'mangle': false,
+                'mangle': true,
                 'banner': '<%= banner.min %>'
             },
 
@@ -65,7 +65,7 @@ module.exports = function (grunt) {
         'jasmine': {
             'src': ['dist/lazy.js'],
             'options': {
-                'specs': ['tests/**/spec.js'],
+                'specs': ['tests/spec.js'],
                 'version': '1.3.1'
             }
         }
