@@ -8,7 +8,7 @@ A tiny JavaScript library for lazy loading resources.
 
 ## Development setup
 1. Install [Git](http://git-scm.com/) and [NodeJS](http://nodejs.org/).
-2. Open your terminal and clone `balloonsjs/balloons` by running:
+2. Open your terminal and clone `mercadolibre/lazy.js` by running:
 
         $ git clone git@github.com:mercadolibre/lazy.js.git
 
