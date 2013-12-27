@@ -162,7 +162,7 @@ window.onscroll = function () {
 
 - `grunt dev`: Builds a development version.
 - `grunt test`: Runs Jasmine tests.
-- `grunt dist`: Creates a distrubution version of `lazy.js`. You should found two files: `.dist/lazy.js` and `.dist/lazy.min.js`.
+- `grunt dist`: Creates a distrubution version of `lazy.js`. You should find two files: `.dist/lazy.js` and `.dist/lazy.min.js`.
 
 ## Contribute
 
