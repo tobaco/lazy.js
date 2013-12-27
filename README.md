@@ -19,9 +19,21 @@ A tiny JavaScript library for lazy loading resources.
 <img data-lazy="http://foo.bar.com/foobar.png" width="400" height="300">
 ```
 
+```js
+window.onload = function () {
+    lazy();
+};
+```
+
 #### Script
 ```html
 <script data-lazy="http://foobar.com/foo.js"></script>
+```
+
+```js
+window.onload = function () {
+    lazy();
+};
 ```
 
 #### Style
@@ -29,9 +41,21 @@ A tiny JavaScript library for lazy loading resources.
 <link data-lazy="http://foobar.com/foo.js" rel="stylesheet">
 ```
 
+```js
+window.onload = function () {
+    lazy();
+};
+```
+
 #### Iframe
 ```html
 <iframe data-lazy="http://foobar.com" src="javascript:false"></iframe>
+```
+
+```js
+window.onload = function () {
+    lazy();
+};
 ```
 
 #### Video
@@ -39,9 +63,21 @@ A tiny JavaScript library for lazy loading resources.
 <video data-lazy="http://foobar.com/bar.mp4" controls></video>
 ```
 
+```js
+window.onload = function () {
+    lazy();
+};
+```
+
 #### Audio
 ```html
 <audio data-lazy="http://foobar.com/foo.mp3" controls></audio>
+```
+
+```js
+window.onload = function () {
+    lazy();
+};
 ```
 
 ### Background Images
@@ -61,6 +97,12 @@ A tiny JavaScript library for lazy loading resources.
 <div data-lazy class="box"></div>
 ```
 
+```js
+window.onload = function () {
+    lazy();
+};
+```
+
 ### Progressive Enhancement is still important
 For example, to show images when JavaScript is not enabled you should include the images inside `<noscript>`.
 ```html
@@ -74,12 +116,18 @@ For example, to show images when JavaScript is not enabled you should include th
 
 ### lazy([nodes])
 Loads resources asynchronously on-demand.
-- `nodes` (optional): [NodeList] - A NodeList of elements. Default: the result of `querySelectorAll('[data-lazy]').
+- `nodes` (optional): [NodeList] - A collection of elements. Default: the result of `querySelectorAll('[data-lazy]').
+
+```html
+<img data-lazy="http://foo.bar.com/foo.png" width="400" height="300">
+<img data-lazy="http://foo.bar.com/bar.png" width="400" height="300">
+<img data-lazy="http://foo.bar.com/foobar.png" width="400" height="300">
+```
 
 ```js
-var imgs = document.querySelectorAll('.on-demand');
-
-lazy(imgs);
+window.onload = function () {
+    lazy();
+};
 ```
 
 ## Development setup

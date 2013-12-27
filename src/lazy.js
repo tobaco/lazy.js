@@ -3,8 +3,15 @@
 
     /**
      * Loads resources asynchronously on-demand.
-     * @param {NodeList} [nodes] - A NodeList of elements. Default: the result of `querySelectorAll('[data-lazy]').
-     * @returns {NodeList}
+     * @param {NodeList} [nodes] - A collection of elements. Default: the result of `querySelectorAll('[data-lazy]')`.
+     * @example
+     * <img data-lazy="http://foo.bar.com/foobar.png" width="400" height="300">
+     *
+     * <script>
+     *     window.onload = function () {
+     *         lazy();
+     *     };
+     * </script>
      */
     function lazy(nodes) {
         nodes = nodes || document.querySelectorAll('[data-lazy]');
