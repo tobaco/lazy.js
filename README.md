@@ -116,17 +116,24 @@ For example, to show images when JavaScript is not enabled you should include th
 
 ### lazy([nodes])
 Loads resources asynchronously on-demand.
-- `nodes` (optional): [NodeList] - A collection of elements. Default: the result of `querySelectorAll('[data-lazy]').
+- `nodes` (optional): [NodeList] - An node element or a collection of node elements. Default: the result of `querySelectorAll('[data-lazy]').
 
 ```html
 <img data-lazy="http://foo.bar.com/foo.png" width="400" height="300">
 <img data-lazy="http://foo.bar.com/bar.png" width="400" height="300">
-<img data-lazy="http://foo.bar.com/foobar.png" width="400" height="300">
+
+<img data-lazy="http://foo.bar.com/foobar.png" width="400" height="300" id="ondemand">
 ```
 
 ```js
 window.onload = function () {
     lazy();
+};
+
+window.onscroll = function () {
+    var ondemand = document.getElementById('ondemand');
+
+    lazy(ondemand);
 };
 ```
 
