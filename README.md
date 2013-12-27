@@ -106,7 +106,7 @@ window.onload = function () {
 ### Progressive Enhancement is still important
 For example, to show images when JavaScript is not enabled you should include the images inside `<noscript>`.
 ```html
-<img data-async="foo.jpg" width="400" height="300">
+<img data-lazy="foo.jpg" width="400" height="300">
 <noscript>
     <img src="foo.jpg" width="400" height="300">
 </noscript>
