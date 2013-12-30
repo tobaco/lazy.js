@@ -1,9 +1,15 @@
 {
   "name": "lazy.js",
   "repo": "mercadolibre/lazy.js",
-  "description": "A tiny JavaScript library for lazy loading resources.",
+  "description": "A tiny and dependency-free JavaScript library for lazy loading resources.",
   "version": "0.0.1",
-  "keywords": [],
+  "keywords": [
+    "lazy",
+    "lazyload",
+    "postpone",
+    "async",
+    "resources"
+  ],
   "dependencies": {},
   "development": {},
   "license": "MIT",

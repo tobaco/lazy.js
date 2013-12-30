@@ -1,6 +1,6 @@
 # lazy.js [![Build Status](https://secure.travis-ci.org/mercadolibre/lazy.js.png)](http://travis-ci.org/mercadolibre/lazy.js) [![devDependency Status](https://david-dm.org/mercadolibre/lazy.js/dev-status.png)](https://david-dm.org/mercadolibre/lazy.js#info=devDependencies)
 
-A tiny JavaScript library for lazy loading resources.
+A tiny and dependency-free JavaScript library for lazy loading resources.
 
 ## What kind of resources can I load?
 
