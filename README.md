@@ -2,7 +2,7 @@
 
 A tiny JavaScript library for lazy loading resources.
 
-## What files can I load?
+## What kind of resources can I load?
 
 - Images
 - Scripts
@@ -82,14 +82,16 @@ window.onload = function () {
 
 ### Background Images
 ```css
+/* You must add the following CSS snippet */
 [data-lazy] {
     background-image: none !important;
 }
 
+/* Your own CSS */
 .box {
     width: 400px;
     height: 300px;
-    background: url('http://foo.bar.com/foobar.png') no-repeat center center;
+    background: url('http://foobar.com/foobar.png') no-repeat center center;
 }
 ```
 
