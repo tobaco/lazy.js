@@ -10,7 +10,7 @@ A tiny and dependency-free JavaScript library for lazy loading resources.
 - Iframes
 - Videos
 - Audios
-- Bacground images.
+- Background images.
 
 ### Examples
 
