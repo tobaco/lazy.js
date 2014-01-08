@@ -24,7 +24,7 @@ You should add the library (inline) into your HTML file:
 
 #### Images
 ```html
-<img data-lazy="http://foo.bar.com/foobar.png" width="400" height="300">
+<img data-lazy="http://foo.bar.com/foobar.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="400" height="300">
 ```
 
 ```js
@@ -129,10 +129,10 @@ Loads resources asynchronously on-demand.
 - `nodes` (optional): [NodeList] - An node element or a collection of node elements. Default: the result of `querySelectorAll('[data-lazy]')`.
 
 ```html
-<img data-lazy="http://foo.bar.com/foo.png" width="400" height="300">
-<img data-lazy="http://foo.bar.com/bar.png" width="400" height="300">
+<img data-lazy="http://foo.bar.com/foo.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="400" height="300">
+<img data-lazy="http://foo.bar.com/bar.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="400" height="300">
 
-<img data-lazy="http://foo.bar.com/foobar.png" width="400" height="300" id="onscroll">
+<img data-lazy="http://foo.bar.com/foobar.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="400" height="300" id="onscroll">
 ```
 
 ```js
