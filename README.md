@@ -173,7 +173,7 @@ Please read through our code style guide:
 
 ## Maintained by
 
-- Guille Paz ([@pazguille](https://twitter.com/pazguille))
+- Guille Paz (guillermo.paz@mercadolibre.com)
 
 ## Credits
 
