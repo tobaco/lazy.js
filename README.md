@@ -1,6 +1,6 @@
 # lazy.js [![Build Status](https://secure.travis-ci.org/mercadolibre/lazy.js.png)](http://travis-ci.org/mercadolibre/lazy.js) [![devDependency Status](https://david-dm.org/mercadolibre/lazy.js/dev-status.png)](https://david-dm.org/mercadolibre/lazy.js#info=devDependencies)
 
-A tiny and dependency-free JavaScript library for lazy loading resources.
+> A tiny and dependency-free JavaScript library for lazy loading resources.
 
 ## What kind of resources can I load?
 
@@ -12,7 +12,15 @@ A tiny and dependency-free JavaScript library for lazy loading resources.
 - Audios
 - Background images.
 
-### Examples
+## How-to
+
+You should add the library (inline) into your HTML file:
+
+```html
+<script>
+    /*! lazy.js v0.0.1 Released under the MIT license. */!function(a){"use strict";function b(a){a=a||document.querySelectorAll("[data-lazy]");var b,c,d,e=0;for(void 0===a.length&&(a=[a]),b=a.length,e;b>e;e+=1)c=a[e],d=c.getAttribute("data-lazy"),""!==d&&(c["LINK"!==c.tagName?"src":"href"]=d),c.removeAttribute("data-lazy")}a.lazy=b}(this);
+</script>
+```
 
 #### Images
 ```html
@@ -124,7 +132,7 @@ Loads resources asynchronously on-demand.
 <img data-lazy="http://foo.bar.com/foo.png" width="400" height="300">
 <img data-lazy="http://foo.bar.com/bar.png" width="400" height="300">
 
-<img data-lazy="http://foo.bar.com/foobar.png" width="400" height="300" id="ondemand">
+<img data-lazy="http://foo.bar.com/foobar.png" width="400" height="300" id="onscroll">
 ```
 
 ```js
@@ -133,7 +141,7 @@ window.onload = function () {
 };
 
 window.onscroll = function () {
-    var ondemand = document.getElementById('ondemand');
+    var ondemand = document.getElementById('onscroll');
 
     lazy(ondemand);
 };
