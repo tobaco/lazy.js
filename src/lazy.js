@@ -19,7 +19,22 @@
         var i = 0,
             len = nodes.length,
             node,
-            data;
+            data,
+            data2x,
+            isRetina = function(){
+                var mediaQuery =    "(-webkit-min-device-pixel-ratio: 1.5),\
+                                    (min--moz-device-pixel-ratio: 1.5),\
+                                    (-o-min-device-pixel-ratio: 3/2),\
+                                    (min-resolution: 1.5dppx)";
+
+                if (window.devicePixelRatio > 1)
+                    return true;
+
+                if (window.matchMedia && window.matchMedia(mediaQuery).matches)
+                    return true;
+
+                return false;
+            };
 
         // Converts given nodes into an array.
         if (len === undefined) {
@@ -29,9 +44,12 @@
 
         for (i; i < len; i += 1) {
             node = nodes[i];
-            data = node.getAttribute('data-lazy');
+            data = node.getAttribute('data-lazy'),
+            data2x = (typeof node.getAttribute('data-lazy2x') !== "undefined" && node.getAttribute('data-lazy2x') !== null) ? node.getAttribute('data-lazy2x') : '';
 
-            if (data !== '') {
+            if (data2x !== '' && isRetina()) {
+                node[node.tagName !== 'LINK' ? 'src' : 'href'] = data2x;
+            } else if (data !== '') {
                 node[node.tagName !== 'LINK' ? 'src' : 'href'] = data;
             }
 
